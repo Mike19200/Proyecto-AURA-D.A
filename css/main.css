@@ -59,17 +59,11 @@ body {
     text-shadow: black 3px 3px 5px;
   }
 
-  h2{
-    color: #fff;
-    font-weight: 300;
-    text-shadow: black 2px 2px 5px;
-  }
-
   p{
     font-size: 25px;
     text-align: center;
     color: #fff;
-    text-shadow: black 2px 2px 5px;
+    text-shadow: black 2px 2px 7px;
   }
   
   #startbtn{
@@ -81,9 +75,29 @@ body {
     background-color: #828080;
     color: #fff;
     border: none;
-    box-shadow: white 6px 5px;
     cursor: pointer;
-
+  }
+  #startbtn::before{
+    font-family: Outfit;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    text-shadow: black 2px 2px 5px;
+    transform: translateX(0) translateY(0);
+    transition: all 0.4s ease-in-out;
+    background-color: #828080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  #startbtn:hover{
+    transform: translateX(-10px) translateY(-5px);
+    transition: all 0.4s ease-out;
+    box-shadow: white 6px 5px;
+  }
+  #startbtn:not(:hover){
+    transform: translateX(0) translateY(0);
+    transition: all 0.4s ease-out;
   }
 
   #continuebtn {
@@ -96,6 +110,28 @@ body {
     color: #fff;
     border: none;
     cursor: pointer;
+  }
+
+  #continuebtn::before {
+    font-family: Outfit;
+    width: 150px;
+    height: 60px;
+    font-size: 25px;
+    text-shadow: black 3px 3px 5px;
+    background-color: #828080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  #continuebtn:hover{
+    transform: translateX(-10px) translateY(-5px);
+    transition: all 0.4s ease-out;
+    box-shadow: white 6px 5px;
+  }
+  #continuebtn:not(:hover){
+    transform: translateX(0) translateY(0);
+    transition: all 0.4s ease-out;
   }
   
   /* Media query para dispositivos móviles */
