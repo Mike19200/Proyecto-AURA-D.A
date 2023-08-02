@@ -8,7 +8,6 @@ body {
     font-family: Outfit;
     background-color: #383535;
   }
-  
   /*Start Page */
 
   .centered-container {
@@ -41,11 +40,50 @@ body {
   }
 
   .top-section {
-    padding-bottom: 70px;
+    padding-bottom: 30px;
     text-align: center;
   }
   
   .bottom-section {
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  /* namePage */
+
+  .centered-container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 768px; /* Opcional: Establece un ancho máximo para evitar que se expanda demasiado en pantallas grandes */
+  }
+  .top-sectionNP {
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  
+  .bottom-sectionNP {
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  /*birthdatePage */
+
+  .centered-container4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 768px; /* Opcional: Establece un ancho máximo para evitar que se expanda demasiado en pantallas grandes */
+  }
+  .top-sectionBP {
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  
+  .bottom-sectionBP {
+    padding-top: 100px;
     text-align: center;
   }
 
@@ -64,6 +102,58 @@ body {
     text-align: center;
     color: #fff;
     text-shadow: black 2px 2px 7px;
+  }
+
+  #continueText{
+    font-size: 17px;
+    text-align: center;
+    color: #fff;
+    text-shadow: black 2px 2px 7px;
+  }
+
+  #nameLabel{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: black 2px 2px 7px;
+  }
+
+  #nameTxtbox{
+    font-family: Outfit;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: black 2px 2px 5px;
+    background-color: #828080;
+    color: #fff;
+    border: none;
+    box-shadow: white 6px 5px;
+  }
+
+  #birthdateInput{
+    font-family: Outfit;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: black 2px 2px 5px;
+    background-color: #828080;
+    color: #fff;
+    border: none;
+    box-shadow: white 6px 5px;
+  }
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: auto;
   }
   
   /* Botones */
@@ -102,37 +192,105 @@ body {
     transition: all 0.4s ease-out;
   }
 
-  #continuebtn {
-    font-family: Outfit;
-    width: 150px;
+  #continuebtn1 {
+    display: inline-block;
+    width: 60px;
     height: 60px;
-    font-size: 25px;
-    text-shadow: black 3px 3px 5px;
+    border: 3px solid black;
+    box-shadow: black 0px 0px 10px;
+    border-radius: 50%;
     background-color: #828080;
-    color: #fff;
-    border: none;
+    text-align: center;
+    line-height: 50px;
     cursor: pointer;
   }
 
-  #continuebtn::before {
-    font-family: Outfit;
-    width: 150px;
-    height: 60px;
-    font-size: 25px;
-    text-shadow: black 3px 3px 5px;
+  #continuebtn1::before {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
     background-color: #828080;
-    color: #fff;
-    border: none;
+    text-align: center;
+    line-height: 50px;
     cursor: pointer;
   }
 
-  #continuebtn:hover{
-    transform: translateX(-10px) translateY(-5px);
+  #continuebtn1:hover{
     transition: all 0.4s ease-out;
-    box-shadow: white 6px 5px;
+    box-shadow: white 0px 0px 30px;
+    border: 1px solid #fff;
   }
-  #continuebtn:not(:hover){
-    transform: translateX(0) translateY(0);
+  #continuebtn1:not(:hover){
+    transition: all 0.4s ease-out;
+  }
+
+  #continuebtn2 {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 3px solid black;
+    box-shadow: black 0px 0px 10px;
+    border-radius: 50%;
+    background-color: #828080;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  #continuebtn2::before {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: #828080;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  #continuebtn2:hover{
+    transition: all 0.4s ease-out;
+    box-shadow: white 0px 0px 30px;
+    border: 1px solid #fff;
+  }
+  #continuebtn2:not(:hover){
+    transition: all 0.4s ease-out;
+  }
+
+  #continuebtn3 {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 3px solid black;
+    box-shadow: black 0px 0px 10px;
+    border-radius: 50%;
+    background-color: #828080;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  #continuebtn3::before {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: #828080;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  #continuebtn3:hover{
+    transition: all 0.4s ease-out;
+    box-shadow: white 0px 0px 30px;
+    border: 1px solid #fff;
+  }
+  #continuebtn3:not(:hover){
     transition: all 0.4s ease-out;
   }
   
