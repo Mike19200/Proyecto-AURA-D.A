@@ -66,6 +66,8 @@ body {
     text-shadow: black 2px 2px 7px;
   }
   
+  /* Botones */
+
   #startbtn{
     font-family: Outfit;
     width: 150px;
@@ -143,7 +145,7 @@ body {
     }
 
     .left-section{
-        padding: 20px;
+      padding: 20px;
     }
     .right-section {
       justify-content: center;
@@ -152,11 +154,11 @@ body {
 
     /*Introduction Page */
     .centered-container2 {
-        flex-direction: column;
+      flex-direction: column;
     }
 
     .top-section{
-        padding: 20px;
+       padding: 20px;
     }
     .bottom-section {
       justify-content: center;
