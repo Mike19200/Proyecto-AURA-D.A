@@ -28,6 +28,40 @@ body {
     text-align: center;
     padding-left: 20px;
   }
+  
+  #startbtn{
+    font-family: Outfit;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    text-shadow: black 2px 2px 5px;
+    background-color: #828080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  #startbtn::before{
+    font-family: Outfit;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    text-shadow: black 2px 2px 5px;
+    transform: translateX(0) translateY(0);
+    transition: all 0.4s ease-in-out;
+    background-color: #828080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  #startbtn:hover{
+    transform: translateX(-10px) translateY(-5px);
+    transition: all 0.4s ease-out;
+    box-shadow: white 6px 5px;
+  }
+  #startbtn:not(:hover){
+    transform: translateX(0) translateY(0);
+    transition: all 0.4s ease-out;
+  }
 
   /*Introduction Page */
 
@@ -49,6 +83,40 @@ body {
     text-align: center;
   }
 
+  #continuebtn1 {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 3px solid black;
+    box-shadow: black 0px 0px 10px;
+    border-radius: 50%;
+    background-color: #828080;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  #continuebtn1::before {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: #828080;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  #continuebtn1:hover{
+    transition: all 0.4s ease-out;
+    box-shadow: white 0px 0px 30px;
+    border: 1px solid #fff;
+  }
+  #continuebtn1:not(:hover){
+    transition: all 0.4s ease-out;
+  }
+
   /* namePage */
 
   .centered-container3 {
@@ -68,6 +136,40 @@ body {
     text-align: center;
   }
 
+  #continuebtn2 {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 3px solid black;
+    box-shadow: black 0px 0px 10px;
+    border-radius: 50%;
+    background-color: #828080;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  #continuebtn2::before {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: #828080;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  #continuebtn2:hover{
+    transition: all 0.4s ease-out;
+    box-shadow: white 0px 0px 30px;
+    border: 1px solid #fff;
+  }
+  #continuebtn2:not(:hover){
+    transition: all 0.4s ease-out;
+  }
+
   /*birthdatePage */
 
   .centered-container4 {
@@ -85,6 +187,40 @@ body {
   .bottom-sectionBP {
     padding-top: 100px;
     text-align: center;
+  }
+
+  #continuebtn3 {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 3px solid black;
+    box-shadow: black 0px 0px 10px;
+    border-radius: 50%;
+    background-color: #828080;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  #continuebtn3::before {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: #828080;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  #continuebtn3:hover{
+    transition: all 0.4s ease-out;
+    box-shadow: white 0px 0px 30px;
+    border: 1px solid #fff;
+  }
+  #continuebtn3:not(:hover){
+    transition: all 0.4s ease-out;
   }
 
   /*Components*/
@@ -154,144 +290,6 @@ body {
     right: 0;
     top: 0;
     width: auto;
-  }
-  
-  /* Botones */
-
-  #startbtn{
-    font-family: Outfit;
-    width: 150px;
-    height: 50px;
-    font-size: 25px;
-    text-shadow: black 2px 2px 5px;
-    background-color: #828080;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  #startbtn::before{
-    font-family: Outfit;
-    width: 150px;
-    height: 50px;
-    font-size: 25px;
-    text-shadow: black 2px 2px 5px;
-    transform: translateX(0) translateY(0);
-    transition: all 0.4s ease-in-out;
-    background-color: #828080;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  #startbtn:hover{
-    transform: translateX(-10px) translateY(-5px);
-    transition: all 0.4s ease-out;
-    box-shadow: white 6px 5px;
-  }
-  #startbtn:not(:hover){
-    transform: translateX(0) translateY(0);
-    transition: all 0.4s ease-out;
-  }
-
-  #continuebtn1 {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border: 3px solid black;
-    box-shadow: black 0px 0px 10px;
-    border-radius: 50%;
-    background-color: #828080;
-    text-align: center;
-    line-height: 50px;
-    cursor: pointer;
-  }
-
-  #continuebtn1::before {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 50%;
-    background-color: #828080;
-    text-align: center;
-    line-height: 50px;
-    cursor: pointer;
-  }
-
-  #continuebtn1:hover{
-    transition: all 0.4s ease-out;
-    box-shadow: white 0px 0px 30px;
-    border: 1px solid #fff;
-  }
-  #continuebtn1:not(:hover){
-    transition: all 0.4s ease-out;
-  }
-
-  #continuebtn2 {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border: 3px solid black;
-    box-shadow: black 0px 0px 10px;
-    border-radius: 50%;
-    background-color: #828080;
-    text-align: center;
-    line-height: 50px;
-    cursor: pointer;
-  }
-
-  #continuebtn2::before {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 50%;
-    background-color: #828080;
-    text-align: center;
-    line-height: 50px;
-    cursor: pointer;
-  }
-
-  #continuebtn2:hover{
-    transition: all 0.4s ease-out;
-    box-shadow: white 0px 0px 30px;
-    border: 1px solid #fff;
-  }
-  #continuebtn2:not(:hover){
-    transition: all 0.4s ease-out;
-  }
-
-  #continuebtn3 {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border: 3px solid black;
-    box-shadow: black 0px 0px 10px;
-    border-radius: 50%;
-    background-color: #828080;
-    text-align: center;
-    line-height: 50px;
-    cursor: pointer;
-  }
-
-  #continuebtn3::before {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 50%;
-    background-color: #828080;
-    text-align: center;
-    line-height: 50px;
-    cursor: pointer;
-  }
-
-  #continuebtn3:hover{
-    transition: all 0.4s ease-out;
-    box-shadow: white 0px 0px 30px;
-    border: 1px solid #fff;
-  }
-  #continuebtn3:not(:hover){
-    transition: all 0.4s ease-out;
   }
   
   /* Media query para dispositivos móviles */
