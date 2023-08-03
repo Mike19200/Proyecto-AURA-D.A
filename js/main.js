@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const numCircles = 50; // Número de círculos que deseas generar
+  const numCircles = 60; // Número de círculos que deseas generar
   const container = document.getElementById("circleContainer");
 
   for (let i = 0; i < numCircles; i++) {
@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function applyRandomMovement(element) {
-    const randomDuration = Math.random() * 30 + 15; // Duración aleatoria entre 1 y 6 segundos
-    const randomX = getRandomCoordinate(window.innerWidth - 200);
-    const randomY = getRandomCoordinate(window.innerHeight - 190);
+    const randomDuration = Math.random() * 15 + 10; // Duración aleatoria entre 1 y 6 segundos
+    const randomX = getRandomCoordinate(window.innerWidth - 100);
+    const randomY = getRandomCoordinate(window.innerHeight - 90);
 
     element.style.animation = `moveRandomly ${randomDuration}s infinite linear`;
     element.style.transform = `translate(${randomX}px, ${randomY}px)`;
@@ -100,7 +100,7 @@ continuebtn3.addEventListener("click", function() {
       setTimeout(function() {
         generatingPage.style.display = "none";
         resultsPage.style.display = "block";
-      }, 10000);
+      }, 15000);
     }, 800);
   } else {
       startPage.style.display = "none";
@@ -111,6 +111,6 @@ continuebtn3.addEventListener("click", function() {
       setTimeout(function() {
         generatingPage.style.display = "none";
         resultsPage.style.display = "block";
-      }, 10000);
+      }, 15000);
   }
 });
