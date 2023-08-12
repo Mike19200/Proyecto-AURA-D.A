@@ -63,6 +63,32 @@ body {
     transition: all 0.4s ease-out;
   }
 
+  .centered-contentSP{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 768px; /
+    background-color: #ffffff; /* Color de fondo del contenido */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+    text-align: center;
+  }
+
+  .gardenbtn {
+    display: none; /* Ocultar el botón por defecto */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
   /*Introduction Page */
 
   .centered-container2 {
@@ -242,6 +268,27 @@ body {
     animation: moveRandomly 100000s infinite linear;
     position: absolute;
   }
+
+   /*resultsPage */
+  
+   .centered-container6{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 768px; 
+   }
+
+   .center-sectionRP{
+     display: flex;
+     justify-content: center; /* Centra horizontalmente */
+     align-items: center; /* Centra verticalmente */
+   }
+
+   .bottom-sectionRP{
+    padding-top: 400px;
+    text-align: center;
+   }
   
   /* Define diferentes colores para los círculos */
   .circlebackground:nth-child(1) {
@@ -327,6 +374,13 @@ body {
     text-shadow: black 2px 2px 7px;
   }
 
+  #resultMsg{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: black 2px 2px 7px;
+  }
+
   #nameTxtbox{
     font-family: Outfit;
     width: 250px;
@@ -368,6 +422,19 @@ body {
     right: 0;
     top: 0;
     width: auto;
+  }
+
+  .blur-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #5900EB, #009D23); /* Colores del círculo */
+    filter: blur(20px); /* Efecto de desenfoque */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Asegura que el círculo esté detrás del texto */
   }
   
   /* Media query para dispositivos móviles */
