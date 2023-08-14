@@ -13,7 +13,6 @@ body {
 
   .centered-container {
     display: flex;
-    justify-content: center;
     flex-direction: row;
     align-items: center;
     max-width: 768px; /* Opcional: Establece un ancho máximo para evitar que se expanda demasiado en pantallas grandes */
@@ -70,17 +69,31 @@ body {
    top: 95%;
    left: 50%;
    transform: translate(-50%, -50%);
+   transition: all 0.4s ease-out;
   }
 
-  #bottom-button {
+  #bottom-buttonSP {
    cursor: pointer;
    background-color: transparent;
    box-shadow: transparent;
    border: transparent;
+   text-shadow: black 2px 2px 5px;
    color:  #fff;
    font-size: 2em;
+   transition: transform .4s ease-in-out;
+  }
+  #bottom-buttonSP:hover{
+    transform: rotate(-180deg);
   }
 
+  .button-containerOnGarden {
+   position: absolute;
+   top: 7%; /* Ajusta la posición vertical según tus preferencias */
+   left: 50%; /* Ajusta la posición horizontal según tus preferencias */
+   display: none;
+   transition: all 0.4s ease;
+   transform: rotate(-180deg);
+  }
 
   /*Introduction Page */
 
@@ -335,6 +348,17 @@ body {
     }
   }
 
+  /* GardenPage */
+
+  .centered-containerGarden{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90;
+    max-width: 768px;
+  }
+
   /*Components*/
   
   h1 {
@@ -432,6 +456,36 @@ body {
     transform: translate(-50%, -50%);
     z-index: 1; /* Asegura que el círculo esté detrás del texto */
   }
+
+  .slide-up {
+  animation: slideUp 0.5s ease forwards;
+  }
+
+  @keyframes slideUp {
+    0% {
+    transform: translateY(100%);
+    opacity: 0;
+     }
+    100% {
+    transform: translateY(0);
+    opacity: 1;
+    }
+  }
+
+  .slide-down {
+    animation: slideDown 0.5s ease forwards;
+  }
+  
+  @keyframes slideDown {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(10%);
+      opacity: 1;
+    }
+  }
   
   /* Media query para dispositivos móviles */
   @media screen and (max-width: 768px) {
@@ -441,7 +495,7 @@ body {
       flex-direction: column;
     }
     .button-container{
-      display: none;
+    
     }
 
     .left-section{

@@ -33,11 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const startbtn = document.getElementById("startbtn");
+const bottombtnSP = document.getElementById("bottom-buttonSP");
 const continuebtn1 = document.getElementById("continuebtn1");
 const continuebtn2 = document.getElementById("continuebtn2");
 const continuebtn3 = document.getElementById("continuebtn3");
 
+
 const startPage = document.getElementById("startPage");
+const gardenPage = document.getElementById("gardenPage");
 const startPagebtn = document.getElementById("startPagebtn");
 const introductionPage = document.getElementById("introductionPage");
 const namePage = document.getElementById("namePage");
@@ -60,6 +63,35 @@ startbtn.addEventListener("click", function() {
     startPagebtn.style.display = "none";
     introductionPage.style.display = "block";
   }
+});
+
+let isUp = false;
+
+bottombtnSP.addEventListener("click", function(){
+
+  if(!isUp)
+  {
+  startPage.style.display = "none";
+  startPagebtn.style.display = "block";
+  startPagebtn.classList.remove("button-container");
+  startPagebtn.classList.add("button-containerOnGarden");
+  startPagebtn.style.transform = "rotate(-180deg)"; 
+  startPagebtn.style.transform = "translate(-50%, -100%)";
+  gardenPage.style.display = "block";
+  gardenPage.classList.add("slide-up");
+  }
+  else
+  {
+  startPage.style.display = "flex";
+  startPagebtn.style.display = "absolute";
+  startPagebtn.style.transform = "translate(-50%, -50%)";
+  startPagebtn.style.transform = "top(95%)";
+  startPagebtn.classList.add("button-container");
+  startPagebtn.classList.remove("button-containerOnGarden");
+  gardenPage.style.display = "none";
+  startPage.classList.add("slide-down");
+  }
+  isUp = !isUp;
 });
 
 continuebtn1.addEventListener("click", function() {
