@@ -79,19 +79,19 @@ bottombtnSP.addEventListener("click", function(){
   startPagebtn.style.transform = "translate(-50%, -100%)";
   gardenPage.style.display = "block";
   gardenPage.classList.add("slide-up");
+  isUp = true;
   }
   else
   {
   startPage.style.display = "flex";
+  startPage.style.top = "-3.6%";
   startPagebtn.style.display = "absolute";
-  startPagebtn.style.transform = "translate(-50%, -50%)";
-  startPagebtn.style.transform = "top(95%)";
-  startPagebtn.classList.add("button-container");
   startPagebtn.classList.remove("button-containerOnGarden");
+  startPagebtn.classList.add("button-container");
   gardenPage.style.display = "none";
   startPage.classList.add("slide-down");
-  }
   isUp = !isUp;
+  }
 });
 
 continuebtn1.addEventListener("click", function() {
