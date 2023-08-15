@@ -523,7 +523,39 @@ body {
     .bottom-section {
       justify-content: center;
       padding: 80px;
+      padding-bottom: 50px;
     }
+
+    /*namePage */
+    .centered-container3 {
+      flex-direction: column;
+
+    }
+
+    .top-sectionNP{
+      padding: 20px;
+    }
+    .bottom-sectionNP {
+      justify-content: center;
+      padding: 80px;
+      padding-bottom: 100px;
+    }
+    
+    /*birthdatePage */
+    .centered-container4 {
+      flex-direction: column;
+
+    }
+
+    .top-sectionBP{
+      padding: 20px;
+    }
+    .bottom-sectionBP {
+      justify-content: center;
+      padding: 80px;
+      padding-bottom: 100px;
+    }
+    
   }
   
   
