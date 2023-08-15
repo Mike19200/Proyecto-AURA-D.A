@@ -497,7 +497,6 @@ body {
     .centered-container{
       flex-direction: column;
       top: 0%;
-      overflow-y: 0;
     }
     .button-container{
     
@@ -514,11 +513,10 @@ body {
     /*Introduction Page */
     .centered-container2 {
       flex-direction: column;
-      overflow-y: 0;
     }
 
     .top-section{
-       padding: 20px;
+      padding: 20px;
     }
     .bottom-section {
       justify-content: center;
