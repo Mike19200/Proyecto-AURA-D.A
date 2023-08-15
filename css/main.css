@@ -14,7 +14,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    overflow: hidden;
     position: relative; /* Agrega esto para controlar la posición relativa */
     top: 0; /* Ajusta la posición vertical al 50% */
     max-width: 768px; /* Opcional: Establece un ancho máximo para evitar que se expanda demasiado en pantallas grandes */
@@ -104,7 +103,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: auto;
+    overflow: hidden;
     max-width: 768px; /* Opcional: Establece un ancho máximo para evitar que se expanda demasiado en pantallas grandes */
   }
 
@@ -213,6 +212,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: auto;
     max-width: 768px; /* Opcional: Establece un ancho máximo para evitar que se expanda demasiado en pantallas grandes */
   }
   .top-sectionBP {
