@@ -7,7 +7,6 @@ body {
     height: 100vh;
     font-family: Outfit;
     background-color: #383535;
-
   }
   /*Start Page */
 
@@ -491,11 +490,13 @@ body {
   
   /* Media query para dispositivos móviles */
   @media screen and (max-width: 768px) {
-    
+    body{
+      overflow: hidden;
+    }
     /*Start Page */
     .centered-container{
       flex-direction: column;
-      top: -6%;
+      top: 0%;
     }
     .button-container{
     

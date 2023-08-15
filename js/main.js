@@ -85,6 +85,9 @@ bottombtnSP.addEventListener("click", function(){
   {
   startPage.style.display = "flex";
   startPage.style.top = "-3.6%";
+  if (window.innerWidth <= 768) {
+    startPage.style.top = "-7.5%"; 
+  };
   startPagebtn.style.display = "absolute";
   startPagebtn.classList.remove("button-containerOnGarden");
   startPagebtn.classList.add("button-container");
