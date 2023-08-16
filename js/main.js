@@ -1,3 +1,15 @@
+const nav = document.querySelector("#nav");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar");
+
+abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
+})
+
+cerrar.addEventListener("click", () => {
+    nav.classList.remove("visible");
+})
+
 document.addEventListener("DOMContentLoaded", function () {
   const numCircles = 60; // Número de círculos que deseas generar
   const container = document.getElementById("circleContainer");
@@ -32,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+const menubtn = document.getElementById("menu");
 const startbtn = document.getElementById("startbtn");
 const bottombtnSP = document.getElementById("bottom-buttonSP");
 const continuebtn1 = document.getElementById("continuebtn1");
@@ -55,12 +68,14 @@ startbtn.addEventListener("click", function() {
     setTimeout(function() {
       startPage.style.display = "none";
       startPagebtn.style.display = "none";
+      menubtn.style.display = "none";
       introductionPage.style.display = "block";
     }, 800);
   } else {
     // Cambiar la sección inmediatamente en otros dispositivos
     startPage.style.display = "none";
     startPagebtn.style.display = "none";
+    menubtn.style.display = "none";
     introductionPage.style.display = "block";
   }
 });
@@ -102,6 +117,7 @@ continuebtn1.addEventListener("click", function() {
     setTimeout(function() {
       startPage.style.display = "none";
       startPagebtn.style.display = "none";
+      menubtn.style.display = "none";
       introductionPage.style.display = "none";
       namePage.style.display = "block";
     }, 800);
@@ -118,6 +134,7 @@ continuebtn2.addEventListener("click", function() {
     setTimeout(function() {
       startPage.style.display = "none";
       startPagebtn.style.display = "none";
+      menubtn.style.display = "none";
       introductionPage.style.display = "none";
       namePage.style.display = "none";
       birthdatePage.style.display = "block";
@@ -125,6 +142,7 @@ continuebtn2.addEventListener("click", function() {
   } else {
       startPage.style.display = "none";
       startPagebtn.style.display = "none";
+      menubtn.style.display = "none";
       introductionPage.style.display = "none";
       namePage.style.display = "none";
       birthdatePage.style.display = "block";
@@ -136,6 +154,7 @@ continuebtn3.addEventListener("click", function() {
     setTimeout(function() {
       startPage.style.display = "none";
       startPagebtn.style.display = "none";
+      menubtn.style.display = "none";
       introductionPage.style.display = "none";
       namePage.style.display = "none";
       birthdatePage.style.display = "none";
@@ -148,6 +167,7 @@ continuebtn3.addEventListener("click", function() {
   } else {
       startPage.style.display = "none";
       startPagebtn.style.display = "none";
+      menubtn.style.display = "none";
       introductionPage.style.display = "none";
       namePage.style.display = "none";
       birthdatePage.style.display = "none";
