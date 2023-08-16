@@ -202,6 +202,7 @@ usBtn.addEventListener("click", function() {
   nav.classList.remove("visible");
   usPage.classList.add("slide-down");
   startPage.style.display = "none";
+  gardenPage.style.display = "none";
   startPagebtn.style.display = "none";
   usPage.style.display = "block";
   usPage.style.display = "flex";
