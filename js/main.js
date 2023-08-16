@@ -3,11 +3,11 @@ const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
 
 abrir.addEventListener("click", () => {
-    nav.classList.add("visible");
+  nav.classList.add("visible");
 })
 
 cerrar.addEventListener("click", () => {
-    nav.classList.remove("visible");
+  nav.classList.remove("visible");
 })
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -50,9 +50,11 @@ const bottombtnSP = document.getElementById("bottom-buttonSP");
 const continuebtn1 = document.getElementById("continuebtn1");
 const continuebtn2 = document.getElementById("continuebtn2");
 const continuebtn3 = document.getElementById("continuebtn3");
-
+const inicioBtn = document.getElementById("inicioBtn");
+const usBtn = document.getElementById("usBtn");
 
 const startPage = document.getElementById("startPage");
+const usPage = document.getElementById("usPage");
 const gardenPage = document.getElementById("gardenPage");
 const startPagebtn = document.getElementById("startPagebtn");
 const introductionPage = document.getElementById("introductionPage");
@@ -129,6 +131,7 @@ continuebtn1.addEventListener("click", function() {
   }
 });
 
+
 continuebtn2.addEventListener("click", function() {
   if (window.innerWidth <= 768) {
     setTimeout(function() {
@@ -177,4 +180,30 @@ continuebtn3.addEventListener("click", function() {
         resultsPage.style.display = "block";
       }, 15000);
   }
+});
+
+inicioBtn.addEventListener("click", function() {
+  nav.classList.remove("visible");
+  startPage.classList.add("slide-down");
+  startPage.style.display = "block";
+  startPage.style.display = "flex";
+  startPage.style.top = "-3.6%";
+  startPagebtn.style.display = "block";
+  menubtn.style.display = "block";
+  usPage.style.display = "none";
+  startPage.style.display = "flex";
+  startPagebtn.style.display = "absolute";
+  startPagebtn.classList.remove("button-containerOnGarden");
+  startPagebtn.classList.add("button-container");
+  gardenPage.style.display = "none";
+});
+
+usBtn.addEventListener("click", function() {
+  nav.classList.remove("visible");
+  usPage.classList.add("slide-down");
+  startPage.style.display = "none";
+  startPagebtn.style.display = "none";
+  usPage.style.display = "block";
+  usPage.style.display = "flex";
+  menubtn.style.display = "block";
 });

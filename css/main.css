@@ -365,6 +365,36 @@ body {
     max-width: 768px;
   }
 
+  /* usPage */
+
+  #usPage{
+    display: none;
+  }
+
+  .centered-container7{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative; /* Agrega esto para controlar la posición relativa */
+    max-width: 900px;
+    overflow: hidden;
+  }
+
+  .left-sectionUspage{
+    position: relative;
+    align-items: center;
+    text-align: left;
+    bottom: 10%;
+    padding-right: 150px;
+    padding-bottom: 150px;
+  }
+
+  .right-sectionUspage{
+    text-align: center;
+    width: 1000px;
+    height: 600px;
+  }
+
   /*Components*/
 
   .rightop-container{
@@ -497,6 +527,33 @@ body {
     color: #fff;
     border: none;
     box-shadow: white 6px 5px;
+  }
+
+  #textInfoProject1{
+    position: relative;
+    flex-direction: column;
+    top: 10%;
+    max-width: 1000px;
+    transform: translate(-0%, -50%);
+    font-size: 22px;
+    z-index: 1;
+  }
+
+  #textInfoProject2{
+    position: relative;
+    max-width: 1000px;
+    top: 10%;
+    transform: translate(-0%, -50%);
+    font-size: 22px;
+    z-index: 1;
+  }
+
+  #textInfoProject3{
+    position: relative;
+    max-width: 1000px;
+    transform: translate(-0%, -50%);
+    font-size: 22px;
+    z-index: 1;
   }
 
   #birthdateInput{
