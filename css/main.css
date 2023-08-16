@@ -375,6 +375,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    bottom: -1%;
     position: relative; /* Agrega esto para controlar la posición relativa */
     max-width: 900px;
     overflow: hidden;
@@ -384,7 +385,6 @@ body {
     position: relative;
     align-items: center;
     text-align: left;
-    bottom: 10%;
     padding-right: 150px;
     padding-bottom: 150px;
   }
@@ -393,6 +393,32 @@ body {
     text-align: center;
     width: 1000px;
     height: 600px;
+  }
+
+  /* creditsPage */
+
+  #creditsPage{
+    display: none;
+  }
+
+  .centered-container8{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    bottom: 5%;
+    position: relative; /* Agrega esto para controlar la posición relativa */
+    max-width: 900px;
+    overflow: hidden;
+  }
+
+  .left-sectionCrdtspage{
+    text-align: left;
+    margin-bottom: 5px; /* Espacio entre el título y el botón */
+    padding-right: 400px;
+  }
+
+  .right-sectionCrdtspage{
+    text-align: center;
   }
 
   /*Components*/
@@ -555,6 +581,25 @@ body {
     font-size: 22px;
     z-index: 1;
   }
+
+  .creds-list {
+    flex-direction: column;
+    align-items: end;
+    list-style: none;
+    padding: 30px;
+  }
+
+  .creds-list li a {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: normal;
+    text-shadow: black 2px 2px 7px;
+    text-decoration: none;
+  } 
+  .creds-list li a i {
+    margin-right: 10px;
+  } 
 
   #birthdateInput{
     font-family: Outfit;

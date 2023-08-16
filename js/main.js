@@ -52,9 +52,11 @@ const continuebtn2 = document.getElementById("continuebtn2");
 const continuebtn3 = document.getElementById("continuebtn3");
 const inicioBtn = document.getElementById("inicioBtn");
 const usBtn = document.getElementById("usBtn");
+const crdsBtn = document.getElementById("crdsBtn");
 
 const startPage = document.getElementById("startPage");
 const usPage = document.getElementById("usPage");
+const creditsPage = document.getElementById("creditsPage");
 const gardenPage = document.getElementById("gardenPage");
 const startPagebtn = document.getElementById("startPagebtn");
 const introductionPage = document.getElementById("introductionPage");
@@ -196,6 +198,7 @@ inicioBtn.addEventListener("click", function() {
   startPagebtn.classList.remove("button-containerOnGarden");
   startPagebtn.classList.add("button-container");
   gardenPage.style.display = "none";
+  creditsPage.style.display = "none";
 });
 
 usBtn.addEventListener("click", function() {
@@ -206,5 +209,17 @@ usBtn.addEventListener("click", function() {
   startPagebtn.style.display = "none";
   usPage.style.display = "block";
   usPage.style.display = "flex";
+  menubtn.style.display = "block";
+  creditsPage.style.display = "none";
+});
+
+crdsBtn.addEventListener("click", function() {
+  nav.classList.remove("visible");
+  creditsPage.classList.add("slide-down");
+  creditsPage.style.display = "flex";
+  startPage.style.display = "none";
+  gardenPage.style.display = "none";
+  startPagebtn.style.display = "none";
+  usPage.style.display = "none";
   menubtn.style.display = "block";
 });
