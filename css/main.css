@@ -449,7 +449,7 @@ body {
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     backdrop-filter: blur(10px); /* Aplica el efecto de desenfoque */
     z-index: 10000; /* Asegura que la barra de navegación esté en la parte superior */
-    animation: 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    animation: 0.3s ease-in-out, visibility 0.5s ease-in-out;
   }
 
   .nav-list {
@@ -481,7 +481,7 @@ body {
   }
 
   .nav.cerrada{
-    transition: slideFromLeft 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    transition: slideFromLeft 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
 
 @keyframes slideFromRight {
@@ -494,7 +494,7 @@ body {
 }
 
 .nav.cerrada {
-  animation: slideFromLeft 0.5s ease-in-out; /* Duración y función de temporización */
+  animation: slideFromLeft 0.3s ease-in-out; /* Duración y función de temporización */
 }
 
 @keyframes slideFromLeft {
