@@ -392,7 +392,8 @@ body {
   .right-sectionUspage{
     text-align: center;
     width: 1000px;
-    height: 600px;
+    height: 550px;
+    transform: translateY(-35px);
   }
 
   /* creditsPage */
@@ -448,6 +449,7 @@ body {
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     backdrop-filter: blur(10px); /* Aplica el efecto de desenfoque */
     z-index: 10000; /* Asegura que la barra de navegación esté en la parte superior */
+    animation: 0.5s ease-in-out, visibility 0.5s ease-in-out;
   }
 
   .nav-list {
@@ -464,11 +466,45 @@ body {
     text-shadow: rgb(104, 102, 102) 1px 1px 2px;
     text-decoration: none;
   } 
+  .nav-list li a:hover {
+    text-shadow: rgb(104, 102, 102) 1px 1px 7px;
+    transition: all 0.3s ease-in-out;
+  } 
+  .nav-list li a:not(:hover) {
+    transition: all 0.3s ease-in-out;
+  } 
 
   .nav.visible {
     opacity: 1;
     visibility: visible;
+    animation-name: slideFromRight;
   }
+
+  .nav.cerrada{
+    transition: slideFromLeft 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  }
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%); /* Comienza fuera de la pantalla hacia la derecha */
+    }
+    100% {
+        transform: translateX(0); /* Termina en la posición original */
+    }
+}
+
+.nav.cerrada {
+  animation: slideFromLeft 0.5s ease-in-out; /* Duración y función de temporización */
+}
+
+@keyframes slideFromLeft {
+  0% {
+      transform: translateX(0); /* Comienza en la posición original */
+  }
+  100% {
+      transform: translateX(100%); /* Termina fuera de la pantalla hacia la derecha */
+  }
+}
 
   .abrir-menu,
   .cerrar-menu {
@@ -568,7 +604,7 @@ body {
   #textInfoProject2{
     position: relative;
     max-width: 1000px;
-    top: 10%;
+    top: 12%;
     transform: translate(-0%, -50%);
     font-size: 22px;
     z-index: 1;
@@ -597,6 +633,15 @@ body {
     text-shadow: black 2px 2px 7px;
     text-decoration: none;
   } 
+
+  .creds-list li a:hover{
+    transition: all 0.4s ease-out;
+    text-shadow: white 0px 0px 20px;
+  } 
+  .creds-list li a:not(:hover){
+    transition: all 0.4s ease-in-out;
+  } 
+
   .creds-list li a i {
     margin-right: 10px;
   } 
@@ -677,6 +722,19 @@ body {
       opacity: 1;
     }
   }
+
+  .slide-in {
+    animation: slideFromRight 1s ease-in-out; /* Nombre de la animación, duración y función de temporización */
+  }
+
+  @keyframes slideFromRight {
+    0% {
+        transform: translateX(100%); /* Comienza fuera de la pantalla hacia la derecha */
+    }
+    100% {
+        transform: translateX(0); /* Termina en la posición original */
+    }
+  } 
   
   /* Media query para dispositivos móviles */
   @media screen and (max-width: 768px) {
