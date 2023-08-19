@@ -52,6 +52,8 @@ const bottombtnSP = document.getElementById("bottom-buttonSP");
 const continuebtn1 = document.getElementById("continuebtn1");
 const continuebtn2 = document.getElementById("continuebtn2");
 const continuebtn3 = document.getElementById("continuebtn3");
+const continuebtn4 = document.getElementById("continuebtn4");
+const continuebtn5 = document.getElementById("continuebtn5");
 const inicioBtn = document.getElementById("inicioBtn");
 const usBtn = document.getElementById("usBtn");
 const crdsBtn = document.getElementById("crdsBtn");
@@ -66,6 +68,8 @@ const namePage = document.getElementById("namePage");
 const birthdatePage = document.getElementById("birthdatePage");
 const generatingPage = document.getElementById("generatingPage");
 const resultsPage = document.getElementById("resultsPage");
+const resultsPage2 = document.getElementById("resultsPage2");
+const summitPage = document.getElementById("summitPage");
 
 startbtn.addEventListener("click", function() {
   // Verificar si la página está abierta en un dispositivo móvil (ancho menor a 768px)
@@ -169,7 +173,7 @@ continuebtn3.addEventListener("click", function() {
       setTimeout(function() {
         generatingPage.style.display = "none";
         resultsPage.style.display = "block";
-      }, 15000);
+      }, 1000);
     }, 800);
   } else {
       startPage.style.display = "none";
@@ -182,7 +186,79 @@ continuebtn3.addEventListener("click", function() {
       setTimeout(function() {
         generatingPage.style.display = "none";
         resultsPage.style.display = "block";
-      }, 15000);
+      }, 1000);
+  }
+});
+continuebtn4.addEventListener("click", function() {
+  if (window.innerWidth <= 768) {
+    setTimeout(function() {
+      startPage.style.display = "none";
+      startPagebtn.style.display = "none";
+      menubtn.style.display = "none";
+      introductionPage.style.display = "none";
+      namePage.style.display = "none";
+      birthdatePage.style.display = "none";
+      generatingPage.style.display = "none";
+      resultsPage.style.display = "none";
+      resultsPage2.style.display = "flex";
+    }, 800);
+  } else {
+      startPage.style.display = "none";
+      startPagebtn.style.display = "none";
+      menubtn.style.display = "none";
+      introductionPage.style.display = "none";
+      namePage.style.display = "none";
+      birthdatePage.style.display = "none";
+      generatingPage.style.display ="none";
+      resultsPage.style.display = "none";
+      resultsPage2.style.display = "flex";
+  }
+});
+
+continuebtn5.addEventListener("click", function() {
+  if (window.innerWidth <= 768) {
+    setTimeout(function() {
+      startPage.style.display = "none";
+      startPagebtn.style.display = "none";
+      menubtn.style.display = "none";
+      introductionPage.style.display = "none";
+      namePage.style.display = "none";
+      birthdatePage.style.display = "none";
+      generatingPage.style.display = "none";
+      resultsPage.style.display = "none";
+      resultsPage2.style.display = "none";
+      summitPage.style.display = "block";
+      setTimeout(function() {
+        summitPage.style.display = "none";
+        startPagebtn.style.display = "block";
+        startPagebtn.classList.add("button-containerOnGarden");
+        startPagebtn.style.transform = "rotate(-180deg)"; 
+        startPagebtn.style.transform = "translate(-50%, -100%)";
+        isUp = true;
+        gardenPage.style.display = "block";
+      }, 5000);
+    }, 800);
+  } else {
+      startPage.style.display = "none";
+      startPagebtn.style.display = "none";
+      menubtn.style.display = "none";
+      introductionPage.style.display = "none";
+      namePage.style.display = "none";
+      birthdatePage.style.display = "none";
+      generatingPage.style.display = "none";
+      resultsPage.style.display = "none";
+      resultsPage2.style.display = "none";
+      summitPage.style.display = "block";
+      setTimeout(function() {
+        summitPage.style.display = "none";
+        startPagebtn.style.display = "block";
+        startPagebtn.classList.add("button-containerOnGarden");
+        startPagebtn.style.transform = "rotate(-180deg)"; 
+        startPagebtn.style.transform = "translate(-50%, -100%)";
+        isUp = true;
+        menubtn.style.display = "block";
+        gardenPage.style.display = "block";
+      }, 5000);
   }
 });
 
