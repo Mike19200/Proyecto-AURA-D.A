@@ -173,7 +173,7 @@ continuebtn3.addEventListener("click", function() {
       setTimeout(function() {
         generatingPage.style.display = "none";
         resultsPage.style.display = "block";
-      }, 1000);
+      }, 10000);
     }, 800);
   } else {
       startPage.style.display = "none";
@@ -186,7 +186,7 @@ continuebtn3.addEventListener("click", function() {
       setTimeout(function() {
         generatingPage.style.display = "none";
         resultsPage.style.display = "block";
-      }, 1000);
+      }, 10000);
   }
 });
 continuebtn4.addEventListener("click", function() {
