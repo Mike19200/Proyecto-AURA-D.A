@@ -314,6 +314,7 @@ body {
    .right-sectionRP2{
      position: relative;
      display: flex;
+     padding-inline-start: 30px;
      flex-direction: column;
      justify-content: center; /* Centra horizontalmente */
      align-items: right; /* Centra verticalmente */
@@ -336,7 +337,6 @@ body {
   }
 
   #continuebtn4 {
-   padding-top: 50px;
    cursor: pointer;
    background-color: transparent;
    box-shadow: transparent;
@@ -364,7 +364,6 @@ body {
   }
 
   #continuebtn5 {
-    padding-top: 50px;
     cursor: pointer;
     background-color: transparent;
     box-shadow: transparent;
@@ -701,6 +700,7 @@ body {
     line-height: 1; /* Ajusta el espacio entre las líneas */
     vertical-align: top;
     padding: 10px; /* Ajusta el relleno interno según tus necesidades */
+    padding-bottom: 50px;
   }
 
   #txtboxLabelRP{
