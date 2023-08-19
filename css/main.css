@@ -314,7 +314,6 @@ body {
    .right-sectionRP2{
      position: relative;
      display: flex;
-     padding-inline-start: 30px;
      flex-direction: column;
      justify-content: center; /* Centra horizontalmente */
      align-items: right; /* Centra verticalmente */
@@ -942,6 +941,13 @@ body {
      width: auto;
      padding-right: 0px;
      margin-bottom: 50px;
+    }
+    .right-sectionRP2{
+     display: flex;
+     justify-content: center; /* Centra horizontalmente */
+     align-items: center; /* Centra verticalmente */
+     width: auto;
+     padding-right: 0px;
     }
     .blur-circle {
       width: 150px;
