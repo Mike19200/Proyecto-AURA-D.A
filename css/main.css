@@ -975,7 +975,7 @@ body {
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      background: radial-gradient(circle, #5900EB, #009D23); /* Colores del círculo */
+      background: radial-gradient(circle, var(--color1), var(--color2)); /* Colores del círculo */
       filter: blur(20px); /* Efecto de desenfoque */
       top: 50%;
       left: 50%;
