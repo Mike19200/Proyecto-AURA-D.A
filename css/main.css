@@ -330,7 +330,7 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: radial-gradient(circle, #5900EB, #009D23); /* Colores del círculo */
+    background: radial-gradient(circle, var(--color1), var(--color2)); /* Colores del círculo */
     filter: blur(20px); /* Efecto de desenfoque */
     top: 40%;
     left: 50%;
@@ -674,6 +674,7 @@ body {
   }
 
   #warningText{
+    display: none;
     font-size: 20px;
     text-align: center;
     font-weight: 400;
@@ -682,6 +683,7 @@ body {
   }
 
   #warningText2{
+    display: none;
     font-size: 20px;
     text-align: center;
     font-weight: 400;
