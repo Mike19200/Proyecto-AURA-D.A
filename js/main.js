@@ -58,6 +58,10 @@ const inicioBtn = document.getElementById("inicioBtn");
 const usBtn = document.getElementById("usBtn");
 const crdsBtn = document.getElementById("crdsBtn");
 
+var nameTxt = document.getElementById("nameTxtbox").value;
+const warningTxt = document.getElementById("warningText");
+const warningTxt2 = document.getElementById("warningText2");
+
 const startPage = document.getElementById("startPage");
 const usPage = document.getElementById("usPage");
 const creditsPage = document.getElementById("creditsPage");
@@ -130,39 +134,72 @@ continuebtn1.addEventListener("click", function() {
       menubtn.style.display = "none";
       introductionPage.style.display = "none";
       namePage.style.display = "block";
+      warningTxt.style.display = "none";
     }, 800);
   } else {
       startPage.style.display = "none";
       startPagebtn.style.display = "none";
       introductionPage.style.display = "none";
       namePage.style.display = "block";
+      warningTxt.style.display = "none";
   }
 });
 
 
 continuebtn2.addEventListener("click", function() {
-  if (window.innerWidth <= 768) {
-    setTimeout(function() {
-      startPage.style.display = "none";
-      startPagebtn.style.display = "none";
-      menubtn.style.display = "none";
-      introductionPage.style.display = "none";
-      namePage.style.display = "none";
-      birthdatePage.style.display = "block";
-    }, 800);
-  } else {
-      startPage.style.display = "none";
-      startPagebtn.style.display = "none";
-      menubtn.style.display = "none";
-      introductionPage.style.display = "none";
-      namePage.style.display = "none";
-      birthdatePage.style.display = "block";
+  var nameTxt = document.getElementById("nameTxtbox").value;
+  if(nameTxt === "" )
+  {
+    warningTxt.style.display = "block";
+  }
+  else
+  {
+    if (window.innerWidth <= 768) {
+      setTimeout(function() {
+        startPage.style.display = "none";
+        startPagebtn.style.display = "none";
+        menubtn.style.display = "none";
+        introductionPage.style.display = "none";
+        namePage.style.display = "none";
+        birthdatePage.style.display = "block";
+        warningTxt2.style.display = "none";
+      }, 800);
+    } else {
+        startPage.style.display = "none";
+        startPagebtn.style.display = "none";
+        menubtn.style.display = "none";
+        introductionPage.style.display = "none";
+        namePage.style.display = "none";
+        birthdatePage.style.display = "block";
+        warningTxt2.style.display = "none";
+    }
   }
 });
 
 continuebtn3.addEventListener("click", function() {
-  if (window.innerWidth <= 768) {
-    setTimeout(function() {
+  var dateTxt = document.getElementById("birthdateInput").value;
+  if(dateTxt === "" )
+  {
+    warningTxt2.style.display = "block";
+  }
+  else
+  {
+    if (window.innerWidth <= 768) {
+      setTimeout(function() {
+        startPage.style.display = "none";
+        startPagebtn.style.display = "none";
+        menubtn.style.display = "none";
+        introductionPage.style.display = "none";
+        namePage.style.display = "none";
+        birthdatePage.style.display = "none";
+        generatingPage.style.display = "block";
+        setTimeout(function() {
+          generatingPage.style.display = "none";
+          resultsPage.style.display = "block";
+        }, 10000);
+      }, 800);
+    } 
+    else {
       startPage.style.display = "none";
       startPagebtn.style.display = "none";
       menubtn.style.display = "none";
@@ -174,19 +211,7 @@ continuebtn3.addEventListener("click", function() {
         generatingPage.style.display = "none";
         resultsPage.style.display = "block";
       }, 10000);
-    }, 800);
-  } else {
-      startPage.style.display = "none";
-      startPagebtn.style.display = "none";
-      menubtn.style.display = "none";
-      introductionPage.style.display = "none";
-      namePage.style.display = "none";
-      birthdatePage.style.display = "none";
-      generatingPage.style.display = "block";
-      setTimeout(function() {
-        generatingPage.style.display = "none";
-        resultsPage.style.display = "block";
-      }, 10000);
+    }
   }
 });
 continuebtn4.addEventListener("click", function() {
