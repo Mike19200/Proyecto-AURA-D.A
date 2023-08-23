@@ -5,8 +5,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    max-width: 100%;
     font-family: Outfit;
     background-color: #383535;
+    overflow-x: hidden;
   }
   /*Start Page */
 
@@ -66,11 +68,11 @@ body {
   }
 
   .button-container {
-   position: absolute;
-   top: 95%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   transition: all 0.4s ease-out;
+    position: fixed;
+    top: 92%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease-out;
+    animation: slideDown 0.5s ease forwards;
   }
 
   #bottom-buttonSP {
@@ -88,12 +90,9 @@ body {
   }
 
   .button-containerOnGarden {
-   position: absolute;
-   top: 7%; /* Ajusta la posición vertical según tus preferencias */
-   left: 50%; /* Ajusta la posición horizontal según tus preferencias */
-   display: none;
-   transition: all 0.4s ease;
-   transform: rotate(-180deg);
+    display: grid;
+    animation: slideUp 0.5s ease forwards;
+    padding-top: 15px;
   }
 
   /*Introduction Page */
@@ -464,15 +463,43 @@ body {
   }
 
   /* GardenPage */
-
   .centered-containerGarden{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90;
-    max-width: 768px;
+    height: 90vh; /* Cambié "90" a "90vh" para establecer el 90% de la altura de la ventana */
+    overflow-x: hidden;
   }
+  
+  .top-sectionGarden {
+    /* transform: translateY(-230px);  Eliminado este transform */
+    text-align: center;
+    top: 100%;
+    transform:translateY(12px);
+  }
+  
+  #GardenTitle {
+    font-size: 45px;
+    text-align: center;
+    color: #fff;
+    text-shadow: black 2px 2px 7px;
+    margin: unset;
+  }
+  
+  #GardenSubtitle {
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: black 2px 2px 7px;
+  }
+  
+  .bottom-sectionGarden {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 2px dashed red;
+  }
+
 
   /* usPage */
 
@@ -841,7 +868,7 @@ body {
   }
 
   .slide-up {
-  animation: slideUp 0.5s ease forwards;
+    animation: slideUp 0.5s ease forwards;
   }
 
   @keyframes slideUp {
@@ -954,6 +981,24 @@ body {
     .centered-container7RP{
         flex-direction: column;
     }
+
+    /* Garden */
+
+    .centered-containerGarden{
+      height: 90vh; /* Cambié "90" a "90vh" para establecer el 90% de la altura de la ventana */
+      overflow-x: hidden;
+    }
+
+    .bottom-sectionGarden {
+      position: absolute;
+      top: 20%;
+      left: 0;
+      width: 99%;
+      height: 80%;
+      background-color: rgba(255, 0, 0, 0.2);
+      border: 2px dashed red;
+    }
+
 
     .left-sectionRP2
     {

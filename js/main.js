@@ -110,13 +110,13 @@ bottombtnSP.addEventListener("click", function(){
   if(!isUp)
   {
   startPage.style.display = "none";
-  startPagebtn.style.display = "block";
+  startPagebtn.style.display = "absolute";
   startPagebtn.classList.remove("button-container");
   startPagebtn.classList.add("button-containerOnGarden");
   startPagebtn.style.transform = "rotate(-180deg)"; 
-  startPagebtn.style.transform = "translate(-50%, -100%)";
-  gardenPage.style.display = "block";
   gardenPage.classList.add("slide-up");
+  gardenPage.style.display = "block";
+  document.body.style.display ="block";
   isUp = true;
   }
   else
@@ -129,8 +129,10 @@ bottombtnSP.addEventListener("click", function(){
   startPagebtn.style.display = "absolute";
   startPagebtn.classList.remove("button-containerOnGarden");
   startPagebtn.classList.add("button-container");
-  gardenPage.style.display = "none";
+  startPagebtn.style.transform = "translate(-50%, -50%)";
   startPage.classList.add("slide-down");
+  gardenPage.style.display = "none";
+  document.body.style.display ="flex";
   isUp = !isUp;
   }
 });
@@ -324,7 +326,6 @@ continuebtn5.addEventListener("click", function() {
   if (window.innerWidth <= 768) {
     setTimeout(function() {
       startPage.style.display = "none";
-      startPagebtn.style.display = "none";
       menubtn.style.display = "none";
       introductionPage.style.display = "none";
       namePage.style.display = "none";
@@ -335,17 +336,18 @@ continuebtn5.addEventListener("click", function() {
       summitPage.style.display = "block";
       setTimeout(function() {
         summitPage.style.display = "none";
-        startPagebtn.style.display = "block";
+        startPagebtn.style.display = "grid";
         startPagebtn.classList.add("button-containerOnGarden");
+        startPagebtn.classList.remove("button-container");
         startPagebtn.style.transform = "rotate(-180deg)"; 
         startPagebtn.style.transform = "translate(-50%, -100%)";
         isUp = true;
         gardenPage.style.display = "block";
+        document.body.style.display ="block";
       }, 5000);
     }, 800);
   } else {
       startPage.style.display = "none";
-      startPagebtn.style.display = "none";
       menubtn.style.display = "none";
       introductionPage.style.display = "none";
       namePage.style.display = "none";
@@ -356,13 +358,15 @@ continuebtn5.addEventListener("click", function() {
       summitPage.style.display = "block";
       setTimeout(function() {
         summitPage.style.display = "none";
-        startPagebtn.style.display = "block";
+        startPagebtn.style.display = "grid";
         startPagebtn.classList.add("button-containerOnGarden");
+        startPagebtn.classList.remove("button-container");
         startPagebtn.style.transform = "rotate(-180deg)"; 
         startPagebtn.style.transform = "translate(-50%, -100%)";
         isUp = true;
         menubtn.style.display = "block";
         gardenPage.style.display = "block";
+        document.body.style.display ="block";
       }, 5000);
   }
 });
@@ -381,6 +385,7 @@ inicioBtn.addEventListener("click", function() {
   startPagebtn.classList.remove("button-containerOnGarden");
   startPagebtn.classList.add("button-container");
   gardenPage.style.display = "none";
+  document.body.style.display ="flex";
   creditsPage.style.display = "none";
 });
 

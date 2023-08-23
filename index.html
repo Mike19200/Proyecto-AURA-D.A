@@ -44,13 +44,15 @@
     <div id="startPagebtn" class="button-container">
      <button id="bottom-buttonSP" class="bottomBtnSP"><i class="fa-solid fa-chevron-down"></i></button>
     </div>
-    <div id="gardenPage" style="display: none;" class="centered-containerGarden">
-      <div class="top-section">
-            <p> Jardin</p>
-          </div>
-          <div class="bottom-section">
-            <p id="continueText">Oprime para continuar</p>
-          </div>
+    <div id="gardenPage" style="display: none;" class="slide-up">
+      <div class="centered-containerGarden">
+        <div class="top-sectionGarden">
+          <p id="GardenTitle"> Jardin</p>
+          <p id="GardenSubtitle">Este es el jardin de auras, aqui podras ver las auras que han liberado otras personas.</p>
+        </div>
+        <div class="bottom-sectionGarden">
+        </div>
+      </div>
     </div>
     <div id="introductionPage" style="display: none;" class="centered-container2">
         <div class="top-section">
@@ -70,7 +72,7 @@
     <div id="namePage" style="display: none;" class="centered-container3">
         <div class="top-sectionNP">
           <p id="nameLabel">Cual es tu nombre?</p>
-          <input type="text" id="nameTxtbox" size="15" />
+          <input autocomplete="off" type="text" id="nameTxtbox" size="15" />
         </div>
         <div class="bottom-sectionNP">
           <button id="continuebtn2"></button>
