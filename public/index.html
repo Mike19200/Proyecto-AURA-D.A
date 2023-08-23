@@ -4,10 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Firebase Hosting</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/d0d323a18b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
-    <!-- update the version number as needed -->
     <script defer src="/__/firebase/10.3.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/10.3.0/firebase-auth-compat.js"></script>
     <script defer src="/__/firebase/10.3.0/firebase-database-compat.js"></script>
     <script defer src="/__/firebase/10.3.0/firebase-firestore-compat.js"></script>
@@ -17,73 +23,172 @@
     <script defer src="/__/firebase/10.3.0/firebase-analytics-compat.js"></script>
     <script defer src="/__/firebase/10.3.0/firebase-remote-config-compat.js"></script>
     <script defer src="/__/firebase/10.3.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
+    
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <div id="menu" class="rightop-container">
+      <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
+                <li id="inicioBtn"><a href="#">Inicio</a></li>
+                <br>
+                <br>
+                <li id="usBtn"><a href="#">Que es "The Aura Project"?</a></li>
+                <br>
+                <br>
+                <li id="crdsBtn"><a href="#">Creditos</a></li>
+            </ul>
+        </nav>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <div id="startPage" class="centered-container">
+        <div class="left-section">
+          <h1>
+            The<br>
+            Aura<br>
+            Project<br>
+          </h1>
+        </div>
+        <div class="right-section">
+          <button id="startbtn">Start</button>
+        </div>
+    </div>
+    <div id="startPagebtn" class="button-container">
+     <button id="bottom-buttonSP" class="bottomBtnSP"><i class="fa-solid fa-chevron-down"></i></button>
+    </div>
+    <div id="gardenPage" style="display: none;" class="slide-up">
+      <div class="centered-containerGarden">
+        <div class="top-sectionGarden">
+          <p id="GardenTitle"> Jardin</p>
+          <p id="GardenSubtitle">Este es el jardin de auras, aqui podras ver las auras que han liberado otras personas.</p>
+        </div>
+        <div class="bottom-sectionGarden">
+        </div>
+      </div>
+    </div>
+    <div id="introductionPage" style="display: none;" class="centered-container2">
+        <div class="top-section">
+            <p>
+                "The Aura Project" es un lugar en línea donde puedes expresar tus emociones y problemas con un aura colorida y única.<br>
+                <br>
+                Te entregaremos un aura la cual estará encargada de cargar con ese problema que te esta causando ansiedad en este momento.
+            </p>
+          </div>
+          <div class="bottom-section">
+            <button id="continuebtn1"></button>
+            <div id="innerCircle"></div>
+            <br>
+            <p id="continueText">Oprime para continuar</p>
+          </div>
+    </div>
+    <div id="namePage" style="display: none;" class="centered-container3">
+        <div class="top-sectionNP">
+          <p id="nameLabel">Cual es tu nombre?</p>
+          <input autocomplete="off" type="text" id="nameTxtbox" size="15" />
+        </div>
+        <div class="bottom-sectionNP">
+          <button id="continuebtn2"></button>
+          <div id="innerCircle"></div>
+          <br>
+          <p id="warningText" >Porfavor ingresa un nombre para continuar</p>
+        </div>
+    </div>
+    <div id="birthdatePage" style="display: none;" class="centered-container4">
+      <div class="top-sectionBP">
+        <p id="birthdateLabel">Cuando naciste?</p>
+        <input type="date" id="birthdateInput" display="none" />
+      </div>
+      <div class="bottom-sectionBP">
+        <button id="continuebtn3"></button>
+        <div id="innerCircle"></div>
+        <br>
+        <p id="warningText2" >Porfavor ingresa tu fecha de nacimiento para continuar</p>
+      </div>
+    </div>
+    <div id="generatingPage" style="display: none;" class="centered-container5">
+      <div class="center-sectionGP" id="circleContainer">
+        <p id="generatingMsg">Generando Aura...</p>
+      </div>
+    </div>
+    <div id="resultsPage" style="display: none;" class="centered-container6">
+      <div class="center-sectionRP">
+        <div class="blur-circle" id="color-circle"></div>
+      </div>
+      <div class="bottom-sectionRP">
+        <p id="resultMsg">Esta es tu aura</p>
+        <button id="continuebtn4"><i class="bi bi-arrow-right-circle"></i></button>
+        <br>
+      </div>
+    </div>
+    <div id="resultsPage2" style="display: none;" class="centered-container7RP">
+      <div class="left-sectionRP2">
+        <p id="auraId"></p>
+        <br>
+        <br>
+        <div class="blur-circle" id="color-circle2"></div>
+      </div>
+      <div class="right-sectionRP2">
+        <br>
+        <p id="txtboxLabelRP"> Dime como te sientes...</p>
+        <br>
+        <textarea class="txtboxAura"></textarea>
+        <br>
+        <br>
+        <button id="continuebtn5"><i class="bi bi-arrow-right-circle"></i></button>
+        <br>
+      </div>
+    </div>
+    <div id="summitPage" style="display: none;" class="centered-container5">
+      <div class="center-sectionGP" id="circleContainer"></div>
+        <p id="summitMsg">Liberando tu aura...</p>
+    </div>
+    <div id="usPage" class="centered-container7">
+      <div class="left-sectionUspage">
+        <h1>
+          The<br>
+          Aura<br>
+          Project<br>
+        </h1>
+      </div>
+      <div class="right-sectionUspage">
+        <br>
+        <p id="textInfoProject1">
+         ¡Bienvenidos al "The Aura Project"! Desarrollado por un equipo de tres estudiantes de IDED de la Universidad Pontificia Bolivariana, este proyecto se enfoca en un desafío crucial: la soledad en relación a los problemas de salud mental.
+        </p>
+        <p id="textInfoProject2">
+         Nuestro objetivo es crear un espacio en línea interactivo donde las personas puedan compartir sus experiencias, pensamientos y preocupaciones. Queremos recordarles que no están solos en sus luchas. Aquí, podrán conectarse con otros individuos que puedan estar atravesando situaciones similares.
+        </p><br>
+        <p id="textInfoProject3">
+         Nuestra visión es crear un ambiente relajante que reduzca la sensación de aislamiento, brindando un espacio especial con auras donde puedan ver que no están solos en sus dificultades.
+        </p>
+      </div>
+    </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <div id="creditsPage" class="centered-container8">
+      <div class="left-sectionCrdtspage">
+        <h1>
+          The<br>
+          Aura<br>
+          Project<br>
+        </h1>
+      </div>
+      <div class="right-sectionCrdtspage">
+        <ul class="creds-list">
+          <p class="txtCreators">Creadores:</p>
+          <li><a href="https://www.instagram.com/mikeee190/"><i class="bi bi-instagram"></i>@mikeee190</a></li>
+          <br>
+          <li><a href="https://www.instagram.com/juansecadavid/"><i class="bi bi-instagram"></i>@juansecadavid</a></li>
+          <br>
+          <li><a href="https://www.instagram.com/yeyeym_18/"><i class="bi bi-instagram"></i>@yeyeym_18</a></li>
+      </ul>
+      </div>
+    </div>
+    <script src="js\main.js"></script>
+    <script src="js/aurasSystem.js"></script>
+    <script src="js/generatingBackground.js"></script>
+    <script src="js/navSystem.js"></script>
+    <script src="js/index.js"></script>
+</body>
 </html>
