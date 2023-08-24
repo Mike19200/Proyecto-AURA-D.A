@@ -80,37 +80,5 @@ function updateDateCircleColor() {
     colorCircle2.style.setProperty("--color2", colorDate);
 }
 
-var auraData = {
-    color1: colorName,
-    color2: colorDate,
-    timestamp: firebase.firestore.FieldValue.serverTimestamp() // To save the timestamp of when the aura was generated
-};
-  
-var db = firebase.firestore();
-  
-function saveAuraData() {
-    var auraData = {
-        color1: colorName,
-        color2: colorDate,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    };
-
-    getNextAuraCount().then(function(auraCount) {
-        var auraId = "Aura #DA" + ("000" + auraCount).slice(-3);
-        auraData.id = auraId;
-
-        // Save aura data to Firestore
-        db.collection("auras").add(auraData)
-          .then(function(docRef) {
-            console.log("Aura saved with ID: ", docRef.id);
-            // Actualizar el contenido del elemento <p> con el ID del aura
-            document.getElementById("auraId").textContent = "ID de Aura: " + auraId;
-          })
-          .catch(function(error) {
-            console.error("Error adding aura: ", error);
-          });
-    });
-}
-
 nameTxt.addEventListener("input", updateNameCircleColor);
 dateTxt.addEventListener("input", updateDateCircleColor);
