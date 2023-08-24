@@ -81,4 +81,4 @@ function updateDateCircleColor() {
 }
 
 nameTxt.addEventListener("input", updateNameCircleColor);
-dateTxt.addEventListener("input", updateDateCircleColor);
+dateTxt.addEventListener("input", updateDateCircleColor); 
