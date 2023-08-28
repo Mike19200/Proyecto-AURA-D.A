@@ -732,7 +732,7 @@ body {
     text-shadow: black 2px 2px 7px;
   }
 
-  .txtboxAura{
+  #txtboxAura{
     font-family: Outfit;
     width: 350px;
     text-align: left;
@@ -747,6 +747,7 @@ body {
     vertical-align: top;
     padding: 10px; /* Ajusta el relleno interno según tus necesidades */
     padding-bottom: 50px;
+    resize: none;
   }
 
   #txtboxLabelRP{
@@ -1030,7 +1031,7 @@ body {
       text-align: left;
       font-size: 20px;
     }
-    .txtboxAura{
+    #txtboxAura{
       font-family: Outfit;
       width: 250px;
       text-align: left;
@@ -1044,6 +1045,7 @@ body {
       line-height: 1; /* Ajusta el espacio entre las líneas */
       vertical-align: top;
       padding: 10px; /* Ajusta el relleno interno según tus necesidades */
+      resize: none;
     }
   }
 
