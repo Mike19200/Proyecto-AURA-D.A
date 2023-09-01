@@ -27,6 +27,8 @@ const generatingPage = document.getElementById("generatingPage");
 const resultsPage = document.getElementById("resultsPage");
 const resultsPage2 = document.getElementById("resultsPage2");
 const summitPage = document.getElementById("summitPage");
+const auraDetailsPage = document.getElementById("auraDetailsPage");
+
 
 startbtn.addEventListener("click", function() {
   // Verificar si la página está abierta en un dispositivo móvil (ancho menor a 768px)

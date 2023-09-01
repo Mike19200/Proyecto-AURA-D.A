@@ -490,14 +490,46 @@ body {
     text-shadow: black 2px 2px 7px;
   }
   
-  .bottom-sectionGarden {
+  #bottom-sectionGarden {
     position: absolute;
     top: 20%;
     left: 0;
     width: 100%;
     height: 80%;
-    background-color: rgba(255, 0, 0, 0.2);
-    border: 2px dashed red;
+  }
+
+  .blur-circleGarden1
+  {
+    margin-right: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--color1), var(--color2)); /* Colores del círculo */
+    filter: blur(20px); /* Efecto de desenfoque */
+    top: 40%;
+    left: 50%;
+    cursor: pointer;
+    outline: none;
+    animation: moveRandomly 20s infinite linear;
+    z-index: 1; /* Asegura que el círculo esté detrás del texto */
+  }
+
+  #auraDetailsPage{
+  left: 50%;
+  transform: translateX(41%); /* Centra horizontalmente el contenedor */
+  margin: 0;
+  height: 90vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centra verticalmente el contenido */
+  top: 0;
+  max-width: 768px;
+  }
+
+  #txtboxAuraDetail{
+    text-align: center;
   }
 
 
