@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
     function applyRandomMovement(element) {
-      const randomDuration = Math.random() * 15 + 10; // Duración aleatoria entre 1 y 6 segundos
+      const randomDuration = Math.random() * 15 + 10;
       const randomX = getRandomCoordinate(window.innerWidth - 100);
       const randomY = getRandomCoordinate(window.innerHeight - 90);
   

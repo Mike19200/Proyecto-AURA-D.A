@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    const numAuras = 10;
+    const numAuras = 15;
     const containerAuras = document.getElementById("bottom-sectionGarden");
-    const auraIdTxt = document.getElementById("auraIdTxt");
+    const auraIdTxt2 = document.getElementById("auraIdTxt2");
     const txtboxAuraDetail = document.getElementById("txtboxAuraDetail");
     const auraDetailsPage = document.getElementById("auraDetailsPage");
+    const auraOnDisplay = document.getElementById("auraOnDisplay");
   
   
     const randomAuras = await getRandomAuras(numAuras);
@@ -22,15 +23,15 @@ document.addEventListener("DOMContentLoaded", async function () {
   
       auras.addEventListener("click", async () => {
         const auraDetails = await getAuraDetails(auraData.id);
-        auras.style.setProperty("--color1", auraData.colorName);
-        auras.style.setProperty("--color2", auraData.colorDate);
-        auraIdTxt.textContent = auraData.id;
         txtboxAuraDetail.textContent = auraData.auraContent;
       });
 
       auras.addEventListener("click", function () {
         if(isUp == true)
         {
+          auraOnDisplay.style.setProperty("--color1", auraData.colorName);
+          auraOnDisplay.style.setProperty("--color2", auraData.colorDate);
+          auraIdTxt2.textContent = auraData.id;
           gardenPage.style.display = "none";
           auraDetailsPage.style.display = "flex";
         }
@@ -40,9 +41,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   
     function applyRandomMovement(element) {
-      const randomDuration = Math.random() * 15 + 10;
+      const randomDuration = Math.random() * 12 + 6;
       const randomX = getRandomCoordinate(window.innerWidth - 100);
-      const randomY = getRandomCoordinate(window.innerHeight - 90);
+      const randomY = getRandomCoordinate(window.innerHeight - 200);
   
       element.style.animation = `moveRandomly ${randomDuration}s infinite linear`;
       element.style.transform = `translate(${randomX}px, ${randomY}px)`;

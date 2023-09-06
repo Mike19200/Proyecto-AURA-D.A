@@ -1,4 +1,4 @@
-body {
+  body {
     margin: 0;
     padding: 0;
     display: flex;
@@ -73,6 +73,7 @@ body {
     transform: translate(-50%, -50%);
     transition: all 0.4s ease-out;
     animation: slideDown 0.5s ease forwards;
+    z-index: 99;
   }
 
   #bottom-buttonSP {
@@ -84,7 +85,15 @@ body {
    color:  #fff;
    font-size: 2em;
    transition: transform .4s ease-in-out;
+   z-index: 99;
   }
+
+  #bottom-buttonSP:active {
+    background-color: transparent;
+    box-shadow: transparent;
+    border: transparent;
+   }
+
   #bottom-buttonSP:hover{
     transform: rotate(-180deg);
   }
@@ -93,6 +102,7 @@ body {
     display: grid;
     animation: slideUp 0.5s ease forwards;
     padding-top: 15px;
+    z-index: 99;
   }
 
   /*Introduction Page */
@@ -464,7 +474,7 @@ body {
 
   /* GardenPage */
   .centered-containerGarden{
-    height: 90vh; /* Cambié "90" a "90vh" para establecer el 90% de la altura de la ventana */
+    height: 70vh; /* Cambié "90" a "90vh" para establecer el 90% de la altura de la ventana */
     overflow-x: hidden;
   }
   
@@ -492,10 +502,10 @@ body {
   
   #bottom-sectionGarden {
     position: absolute;
-    top: 20%;
-    left: 0;
-    width: 100%;
-    height: 80%;
+    top: 40%;
+    left: 10%;
+    width: 70%;
+    height: 50%;
   }
 
   .blur-circleGarden1
@@ -516,7 +526,7 @@ body {
 
   #auraDetailsPage{
   left: 50%;
-  transform: translateX(41%); /* Centra horizontalmente el contenedor */
+  transform: translateX(0); /* Centra horizontalmente el contenedor */
   margin: 0;
   height: 90vh;
   overflow-x: hidden;
@@ -525,11 +535,49 @@ body {
   align-items: center;
   justify-content: center; /* Centra verticalmente el contenido */
   top: 0;
-  max-width: 768px;
+  }
+
+  #auraDetailsPage {
+    display: none;
+    text-align: center;
+  }
+  
+  #auraDetailsPage > div {
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  #auraAndTextContainer {
+    text-align: center; /* Centra el contenido horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+  }
+
+  #auraOnDisplay{
+    margin: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--color1), var(--color2)); /* Colores del círculo */
+    filter: blur(20px); /* Efecto de desenfoque */
+    top: 40%;
+    left: 50%;
+    cursor: pointer;
+    outline: none;
+    border: none;
   }
 
   #txtboxAuraDetail{
     text-align: center;
+    font-size: 25px;
+    max-width: 250px; /* Establece un ancho máximo para el párrafo */
+    margin: 0 auto; /* Centra el párrafo horizontalmente */
   }
 
 
@@ -952,6 +1000,54 @@ body {
       top: 0%;
     }
 
+    .centered-containerGarden{
+      height: 90vh; /* Cambié "90" a "90vh" para establecer el 90% de la altura de la ventana */
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    #auraDetailsPage{
+      height: 78vh;
+    }
+
+    #auraDetailsPage > div {
+      display: inline-block;
+      text-align: left;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    
+    #auraAndTextContainer {
+      text-align: center; /* Centra el contenido horizontalmente */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: none;
+    }
+  
+    #auraOnDisplay{
+      margin: 0;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--color1), var(--color2)); /* Colores del círculo */
+      filter: blur(20px); /* Efecto de desenfoque */
+      top: 40%;
+      left: 50%;
+      cursor: pointer;
+      outline: none;
+      border: none;
+    }
+  
+    #txtboxAuraDetail{
+      text-align: center;
+      font-size: 25px;
+      max-width: 250px; /* Establece un ancho máximo para el párrafo */
+      margin: 0 auto; /* Centra el párrafo horizontalmente */
+    }
+
 
     .rightop-container{
       display: none;
@@ -1017,9 +1113,18 @@ body {
 
     /* Garden */
 
+    #gardenPage{
+      overflow-y: hidden;
+    }
+
     .centered-containerGarden{
       height: 90vh; /* Cambié "90" a "90vh" para establecer el 90% de la altura de la ventana */
       overflow-x: hidden;
+      overflow-y: hidden;
+    }
+    
+    #bottom-sectionGarden {
+      top: 20%; 
     }
 
     .bottom-sectionGarden {
@@ -1063,6 +1168,14 @@ body {
       text-align: left;
       font-size: 20px;
     }
+
+    #bottom-sectionGarden {
+      position: absolute;
+      top: 25%;
+      left: 10%;
+      width: 80%;
+    }
+
     #txtboxAura{
       font-family: Outfit;
       width: 250px;
@@ -1080,6 +1193,7 @@ body {
       resize: none;
     }
   }
+
 
   
 

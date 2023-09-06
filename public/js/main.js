@@ -81,6 +81,16 @@ bottombtnSP.addEventListener("click", function(){
   document.body.style.display ="flex";
   isUp = !isUp;
   }
+  if(auraDetailsPage.style.display === "flex"){
+    startPage.style.display = "none";
+    auraDetailsPage.style.display = "none";
+    startPagebtn.classList.remove("button-container");
+    startPagebtn.classList.add("button-containerOnGarden");
+    startPagebtn.style.display = "absolute";
+    gardenPage.style.display = "block";
+    document.body.style.display ="block";
+    isUp = true;
+  }
 });
 
 continuebtn1.addEventListener("click", function() {
