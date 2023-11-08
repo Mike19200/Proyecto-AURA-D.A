@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function () {
-  const numAuras = 15;
+  const numAuras = 12;
   const containerAuras = document.getElementById("bottom-sectionGarden");
   const auraIdTxt2 = document.getElementById("auraIdTxt2");
   const txtboxAuraDetail = document.getElementById("txtboxAuraDetail");
